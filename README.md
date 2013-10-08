@@ -19,10 +19,10 @@ Instrucciones
         $ rake
 
 2. El servidor arrancará.
-3. Ahora visitamos la página [http://localhost:9292](http://localhost:9292) en el navegador preferido.
+3. Ahora visitamos la página [http://localhost:9292](http://localhost:9292) en el navegador preferido.  
 
 ---
 
 Universidad de La Laguna  
 Escuela Técnica Superior de Ingeniería Informática  
-Lenguajes y Paradigmas de la Programación 2013-14
+Sistemas y Tecnologías Web 2013-14
