@@ -23,7 +23,7 @@ module RockPaperScissors
       
       computer_throw = @throws.sample
       player_throw = req.GET["choice"]
-      anwser = if !@throws.include?(player_throw)
+      answer = if !@throws.include?(player_throw)
           "Choose one of the following:"
         elsif player_throw == computer_throw
           "You tied with the computer"
@@ -35,10 +35,13 @@ module RockPaperScissors
 
       engine = Haml::Engine.new File.open("views/index.haml").read
       res = Rack::Response.new
-      res.write engine.render({}, 
+      res.write engine.render(
+        {},
         :answer => answer, 
         :choose => @choose,
-        :throws => @throws)
+        :throws => @throws,
+        :computer_throw => computer_throw,
+        :player_throw => player_throw)
       # res.write <<-"EOS"
       # <html>
       #   <title>rps</title>
