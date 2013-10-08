@@ -1,5 +1,6 @@
 require 'rack/request'
 require 'rack/response'
+require 'haml'
  
 module RockPaperScissors
   class App 
@@ -32,18 +33,23 @@ module RockPaperScissors
           "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time!"
         end
 
+      engine = Haml::Engine.new File.open("views/index.haml").read
       res = Rack::Response.new
-      res.write <<-"EOS"
-      <html>
-        <title>rps</title>
-        <body>
-          <h1>
-              #{anwser}
-              #{@choose}
-          </h1>
-        </body>
-      </html>
-      EOS
+      res.write engine.render({}, 
+        :answer => answer, 
+        :choose => @choose,
+        :throws => @throws)
+      # res.write <<-"EOS"
+      # <html>
+      #   <title>rps</title>
+      #   <body>
+      #     <h1>
+      #         #{anwser}
+      #         #{@choose}
+      #     </h1>
+      #   </body>
+      # </html>
+      # EOS
       res.finish
     end # call
   end   # App
