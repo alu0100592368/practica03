@@ -42,17 +42,6 @@ module RockPaperScissors
         :throws => @throws,
         :computer_throw => computer_throw,
         :player_throw => player_throw)
-      # res.write <<-"EOS"
-      # <html>
-      #   <title>rps</title>
-      #   <body>
-      #     <h1>
-      #         #{anwser}
-      #         #{@choose}
-      #     </h1>
-      #   </body>
-      # </html>
-      # EOS
       res.finish
     end # call
   end   # App

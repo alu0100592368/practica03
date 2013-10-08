@@ -1,19 +1,19 @@
-desc "run the server"
+desc "Ejecutar el cliente"
 task :default do
   sh "ruby rps.rb"
 end
 
-desc "run the client with rock"
+desc "Ejecutar el cliente con la eleccion de Rock"
 task :rock do
   sh %q{curl -v 'http://localhost:9292?choice=rock'}
 end
 
-desc "run the client with paper"
+desc "Ejecutar el cliente con la eleccion de Paper"
 task :paper do
   sh %q{curl -v 'http://localhost:9292?choice=paper'}
 end
 
-desc "run the client with scissors"
+desc "Ejecutar el cliente con la eleccion de Scissors"
 task :scissors do
   sh %q{curl -v 'http://localhost:9292?choice=scissors'}
 end
