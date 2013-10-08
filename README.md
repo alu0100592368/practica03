@@ -1,18 +1,28 @@
-Practica 3: Añada Hojas de Estilo a Piedra Papel Tijeras
---------------------------------------------------------
-Sistemas y Tecnologías Web 13-14
+Práctica #3
+=========== 
+
+Añadir Template Haml a Piedra Papel Tijeras
+-------------------------------------------
+
+Diego Williams Aguilar Montaño
+
+Descripción de la práctica
+--------------------------
+La práctica consiste en crear un template index.haml en el directorio views para el ejemplo "[Un Ejemplo Simple: Piedra, Papel, tijeras](http://nereida.deioc.ull.es/~lpp/perlexamples/node353.html)", una vez creado el index.haml se realizaron las modificaciones en el fichero rps.rb para que carge a través del servidor rack el template creado.
 
 
-Diego Williams Aguilar Montaño  
-alu3875
+Instrucciones
+-------------
 
-Descripción de la práctica:
----------------------------
-Continuación de la práctica "Accediendo a Twitter"...
+1. Ejecutar el programa mediante el archivo rake proporcionado:
 
-Instrucciones:
---------------
-1. Utilizar el archivo "configure.rb" (no añadido en el repositorio) que contiene las credenciales de Twitter.
-2. Ejecutar el programa mediante el archivo rake proporcionado: $ rake
-3. El servidor arrancará.
-4. Ahora visitamos la página http://localhost:8080 en el navegador preferido.
+        $ rake
+
+2. El servidor arrancará.
+3. Ahora visitamos la página "[http://localhost:9292](http://localhost:9292)" en el navegador preferido.
+
+---
+
+Universidad de La Laguna  
+Escuela Técnica Superior de Ingeniería Informática  
+Lenguajes y Paradigmas de la Programación 2013-14
