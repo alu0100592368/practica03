@@ -25,7 +25,7 @@ module RockPaperScissors
         elsif player_throw == computer_throw
           "¡Haz empatado con la máquina!"
         elsif computer_throw == @defeat[player_throw]
-          "¡Bien hecho!; #{player_throw} gana a #{computer_throw}"
+          "¡Bien hecho! #{player_throw} gana a #{computer_throw}"
         else
           "Oops... #{computer_throw} gana a #{player_throw}. ¡Suerte la próxima vez!"
         end
