@@ -19,7 +19,7 @@ Instrucciones
         $ rake
 
 2. El servidor arrancará.
-3. Ahora visitamos la página "[http://localhost:9292](http://localhost:9292)" en el navegador preferido.
+3. Ahora visitamos la página [http://localhost:9292](http://localhost:9292) en el navegador preferido.
 
 ---
 
