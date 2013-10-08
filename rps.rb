@@ -7,7 +7,7 @@ module RockPaperScissors
     def initialize(app = nil)
       @app = app
       @content_type = :html
-      @defeat = {'rock' => 'scissors', 'paper' => 'rock', 'scissors' => 'paper'}
+      @defeat = {'Piedra' => 'Tijera', 'Papel' => 'Piedra', 'Tijera' => 'Papel'}
       @throws = @defeat.keys
       @choose = @throws.map { |x| 
         %Q{ <li><a href="/?choice=#{x}">#{x}</a></li> }
@@ -21,13 +21,13 @@ module RockPaperScissors
       computer_throw = @throws.sample
       player_throw = req.GET["choice"]
       answer = if !@throws.include?(player_throw)
-          "Choose one of the following:"
+          "Elija una de las tres opciones:"
         elsif player_throw == computer_throw
-          "You tied with the computer"
+          "¡Haz empatado con la máquina!"
         elsif computer_throw == @defeat[player_throw]
-          "Nicely done; #{player_throw} beats #{computer_throw}"
+          "¡Bien hecho!; #{player_throw} gana a #{computer_throw}"
         else
-          "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time!"
+          "Oops... #{computer_throw} gana a #{player_throw}. ¡Suerte la próxima vez!"
         end
       engine = Haml::Engine.new File.open("views/index.haml").read
       res = Rack::Response.new

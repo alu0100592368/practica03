@@ -5,27 +5,13 @@
   %body
     %ol
       %h3 RPS
-      %a{:href => '?choice=rock'} Rock
-      %a{:href => '?choice=paper'} Paper
-      %a{:href => '?choice=scissors'} Scissors
-
+      %a{:href => '?choice=Piedra'} Piedra
+      %a{:href => '?choice=Papel'} Papel
+      %a{:href => '?choice=Tijera'} Tijera
 
     %center
       %h1 WELCOME TO THE GAME
       %br
 
-    %center
-      %h2 Player 1
-      - if(player_throw == 'rock')
-        
-      - elsif (player_throw == 'scissors')
-      - elsif (player_throw == 'paper')
-
-      %h2 vs
-      
-      %h2 Player 2
-      - if(computer_throw == 'rock')
-      - elsif (computer_throw == 'scissors')
-      - elsif (computer_throw == 'paper')
     
       %h3= answer
