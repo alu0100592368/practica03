@@ -3,8 +3,7 @@ require 'rack/response'
 require 'haml'
  
 module RockPaperScissors
-  class App 
-    
+  class App
     def initialize(app = nil)
       @app = app
       @content_type = :html
@@ -18,9 +17,7 @@ module RockPaperScissors
 
     def call(env)
       req = Rack::Request.new(env) 
-      
       req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
-      
       computer_throw = @throws.sample
       player_throw = req.GET["choice"]
       answer = if !@throws.include?(player_throw)
@@ -32,7 +29,6 @@ module RockPaperScissors
         else
           "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time!"
         end
-
       engine = Haml::Engine.new File.open("views/index.haml").read
       res = Rack::Response.new
       res.write engine.render(
