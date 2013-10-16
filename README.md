@@ -1,8 +1,8 @@
-Práctica #3
+Práctica #4
 =========== 
 
-Añadir Template Haml a Piedra Papel Tijeras
--------------------------------------------
+Añadir Hojas de Estilo a Piedra Papel Tijeras
+---------------------------------------------
 
 Diego Williams Aguilar Montaño
 
